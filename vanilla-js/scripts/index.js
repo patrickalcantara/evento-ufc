@@ -67,7 +67,7 @@ async function loadDetailsProduct(productId) {
     createCustomElement("h2", "", product.title)
   );
   modalProductDescription.appendChild(
-    createCustomElement("p", "", product.price)
+    createCustomElement("p", "", `R$ ${product.price}`)
   );
 
   const modalProduct = createCustomElement("div", "modal-product");
@@ -75,7 +75,7 @@ async function loadDetailsProduct(productId) {
   modalProduct.appendChild(modalProductImage);
   modalProduct.appendChild(modalProductDescription);
 
-  modal.style.display = "block";
+  modal.style.display = "grid";
   modal.appendChild(modalProduct);
 
   modalClose.addEventListener("click", () => {
