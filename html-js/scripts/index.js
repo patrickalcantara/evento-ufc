@@ -25,7 +25,7 @@ function assembleProducts(products) {
     <div class="product-details"><a href="products.html?id=${product.id}">Detalhes</a></div>
   </div>`;
   });
-
+  console.log(products);
   productsList.innerHTML = html;
 }
 
